@@ -43,7 +43,14 @@ const defaultRequestTimeout = () => {
  */
 function getApiUrl(group: string, path: string): string {
   const config = useRuntimeConfig();
-  return `${config.backendUrl}:${config.backendPort}/${join(group, path)}`;
+  // console.log('ㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛ');
+  // console.log(config.public.nodeEnv);
+  // console.log(`${config.public.backendPort}`);
+  // console.log(config.public.backendUrl);
+  // console.log('API secret:', config.sampletest);
+  // console.log('API apiBase:', config.public.apiBase);
+  // console.log('ㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛㅛ');
+  return `${config.public.backendUrl}:${config.public.backendPort}/${join(group, path)}`;
 }
 
 function makeResponse(error, data, statusCode, showError): APIResponse {

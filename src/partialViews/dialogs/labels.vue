@@ -1,5 +1,5 @@
 <template>
-  <K3Dialog header="Labels 설정" v-model:visible="display" :modal="true" :style="{ width: '50vw' }" @hide="onHide">
+  <K3Dialog header="Labels 설정" v-bind:visible="display" :modal="true" :style="{ width: '50vw' }" @hide="onHide">
     <K3FormContainer class="no-style">
       <K3ValidateEach v-for="(item, index) in items" :key="index" :state="(item as any)" :rules="vRules">
         <template #default="{ v }">

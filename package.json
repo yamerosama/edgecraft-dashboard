@@ -13,26 +13,27 @@
         "@fortawesome/fontawesome-free": "^6.1.1",
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
         "@fortawesome/free-solid-svg-icons": "^6.1.1",
-        "@types/js-yaml": "^4.0.5",
-        "@types/vuelidate": "^0.7.15",
-        "@vuelidate/components": "^1.2.0",
-        "@vuelidate/core": "^2.0.0-alpha.42",
-        "@vuelidate/validators": "^2.0.0-alpha.30",
-        "@vueuse/nuxt": "^9.1.1",
+        "@types/js-yaml": "^4.0.9",
+        "@types/vuelidate": "^0.7.21",
+        "@vuelidate/components": "^1.2.6",
+        "@vuelidate/core": "^2.0.3",
+        "@vuelidate/validators": "^2.0.4",
+        "@vueuse/nuxt": "^10.7.2",
         "ace-builds": "^1.6.1",
         "chart.js": "^3.8.0",
         "chartjs-plugin-annotation": "^1.4.0",
         "js-yaml": "^4.1.0",
-        "json-server": "^0.17.0",
+        "json-server": "^0.17.4",
         "json-server-auth": "^2.1.0",
-        "nuxt": "^3.0.0-rc.8",
-        "primevue": "^3.15.0",
-        "prismjs": "^1.28.0",
-        "sass": "^1.53.0",
-        "switch-ts": "^1.0.9"
+        "nuxt": "^3.10.0",
+        "primevue": "^3.47.2",
+        "prismjs": "^1.29.0",
+        "sass": "^1.70.0",
+        "switch-ts": "^1.1.1"
     },
     "dependencies": {
         "primeflex": "^3.2.1",
-        "primeicons": "^5.0.0"
+        "primeicons": "^5.0.0",
+        "typescript": "^5.3.3"
     }
 }

@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 import pkg from './package.json'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
@@ -46,17 +46,32 @@ export default defineNuxtConfig({
     },
     // Build 단계 모듈
     buildModules: [],
-    // Private Runtime config (access server only)
-    privateRuntimeConfig: {
-    },
-    // Public Runtime config (access client and server)
-    publicRuntimeConfig: {
-        nodeEnv: process.env.NODE_ENV,
-        backendUrl: process.env.BACKEND_BASE_URL,       // backend url
-        backendPort: process.env.BACKEND_BASE_PORT,	    // backend port
-        version: pkg.version,                           // app version
-        refreshInterval: 5000,                          // Refresh timeout
-        requestTimeout: 2000                            // Request timeout
+    // // Private Runtime config (access server only)
+    // privateRuntimeConfig: {
+    // },
+    // // Public Runtime config (access client and server)
+    // publicRuntimeConfig: {
+    //     nodeEnv: process.env.NODE_ENV,
+    //     backendUrl: process.env.BACKEND_BASE_URL,       // backend url
+    //     backendPort: process.env.BACKEND_BASE_PORT,	    // backend port
+    //     version: pkg.version,                           // app version
+    //     refreshInterval: 5000,                          // Refresh timeout
+    //     requestTimeout: 2000                            // Request timeout
+    // },
+    runtimeConfig: {
+        // Private Runtime config (access server only)
+        apiSecret: 'sample', // can be overridden by NUXT_API_SECRET environment variable
+        // Public Runtime config (access client and server)
+        public: {
+          apiBase: 'sample', // can be overridden by NUXT_PUBLIC_API_BASE environment variable          
+          nodeEnv: '',
+          backendUrl: 'http://192.168.0.11',       // backend url
+          backendPort: '31810',	    // backend port
+          version: pkg.version,                           // app version
+          refreshInterval: 5000,                          // Refresh timeout
+          requestTimeout: 2000                            // Request timeout
+        },
+        sampletest: 'abcde',
     },
     // Router
     router: {},

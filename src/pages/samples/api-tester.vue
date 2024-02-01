@@ -32,13 +32,14 @@
 definePageMeta({ layout: 'default', title: 'API Tester', public: true })
 // const props = defineProps({}),
 // const emits = defineEmits(['eventname']),
+const runtimeConfig = useRuntimeConfig()
 
 const { API } = useAppHelper()
 
 const docs = ref("")
 const queries = ref("")
 
-const url = 'http://192.168.88.151:32080/openapi/swagger/index.html#/'
+const url = `${runtimeConfig.public.backendUrl}:${runtimeConfig.public.backendPort}/swagger/index.html#/`
 const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiVVVJRCI6ImY0MzNkMzIwLTBkZTgtNDNjZi05ZDBmLWJmMTJmNmZjNGY5MiIsIlVzZXJuYW1lIjoiYWRtaW4ua29yZXNlcnZlIiwiTmlja05hbWUiOiJzdXBlciBhZG1pbiIsIkF1dGhvcml0eUlEIjoiZ3JvdXA6YWRtaW4iLCJleHAiOjE2NjE5MzI1MTMsImlzcyI6IktPUkVTRVJWRSIsIm5iZiI6MTY2MTMyNjcxM30.PtzWPZdYWHZdCdAvnvl40-KiWxz5olYegoGteHudf2I"
 
 const addQueries = (url) => url + (queries.value ? `?${queries.value}` : '')

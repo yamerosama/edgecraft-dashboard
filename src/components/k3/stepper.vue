@@ -27,9 +27,9 @@
     <div class="content">
       <transition :enter-active-class="enterAnimation" :leave-active-class="leaveAnimation" mode="out-in">
         <keep-alive v-if="keepAliveData">
-          <component ref="comp" :is="stepComponent" v-model="modelValue" :clickedNext="nextButton[currentStep.name]" @can-continue="proceed" @change-next="changeNextBtnValue" @visible-change="changeVisible" :current-step="currentStep" :key="componentKey" />
+          <component ref="comp" :is="stepComponent" v-bind="modelValue" :clickedNext="nextButton[currentStep.name]" @can-continue="proceed" @change-next="changeNextBtnValue" @visible-change="changeVisible" :current-step="currentStep" :key="componentKey" />
         </keep-alive>
-        <component v-else ref="comp" :is="stepComponent" v-model="modelValue" :clickedNext="nextButton[currentStep.name]" @can-continue="proceed" @change-next="changeNextBtnValue" @visible-change="changeVisible" :current-step="currentStep" :key="componentKey" />
+        <component v-else ref="comp" :is="stepComponent" v-bind="modelValue" :clickedNext="nextButton[currentStep.name]" @can-continue="proceed" @change-next="changeNextBtnValue" @visible-change="changeVisible" :current-step="currentStep" :key="componentKey" />
       </transition>
     </div>
     <div :class="['bottom', currentStep.index > 0 ? '' : 'only-next']">

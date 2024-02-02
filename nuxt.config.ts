@@ -65,8 +65,8 @@ export default defineNuxtConfig({
         public: {
           apiBase: 'sample', // can be overridden by NUXT_PUBLIC_API_BASE environment variable          
           nodeEnv: '',
-          backendUrl: 'http://192.168.0.11',       // backend url
-          backendPort: '31810',	    // backend port
+          backendUrl: 'http://127.0.0.1',       // backend url
+          backendPort: '8100',	    // backend port
           version: pkg.version,                           // app version
           refreshInterval: 5000,                          // Refresh timeout
           requestTimeout: 2000                            // Request timeout
